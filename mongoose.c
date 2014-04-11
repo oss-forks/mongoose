@@ -130,7 +130,7 @@ typedef int sock_t;
 #ifdef __APPLE__
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
-#include <openssl/ssl.h>
+#include <yip-imports/openssl/ssl.h>
 #else
 typedef void *SSL;
 typedef void *SSL_CTX;

@@ -39,7 +39,7 @@
 #include <ctype.h>
 #include <time.h>
 
-#include "mongoose.h"
+#include "../mongoose.h"
 
 #ifdef _WIN32
 #include <windows.h>
