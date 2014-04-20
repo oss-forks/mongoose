@@ -27,7 +27,7 @@ class HttpServer
 {
 public:
 	HttpServer();
-	~HttpServer();
+	virtual ~HttpServer();
 
 	void setOption(const char * name, const char * value);
 	void setOption(const char * name, const std::string & value);
@@ -52,6 +52,13 @@ private:
 
 	HttpServer(const HttpServer &) = delete;
 	HttpServer & operator=(const HttpServer &) = delete;
+};
+
+template <class HANDLER> class HttpServerEx : public HttpServer
+{
+public:
+	inline HttpServerEx() {}
+	HttpConnectionHandler * newConnectionHandler() { return new HANDLER; }
 };
 
 #endif

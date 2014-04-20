@@ -51,7 +51,7 @@ HttpServer::~HttpServer()
 void HttpServer::setOption(const char * name, const char * value)
 {
 	const char * msg = mg_set_option(m_Server, name, value);
-	if (UNLIKELY(!msg))
+	if (UNLIKELY(msg != NULL))
 		throw std::runtime_error(msg);
 }
 
