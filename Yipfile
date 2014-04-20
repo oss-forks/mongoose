@@ -17,6 +17,7 @@ See the GNU General Public License for more details.
 Alternatively, you can license this code under a commercial
 license, as set out in <http://cesanta.com/>."
 
+import cxx-util
 import openssl
 
 defines
@@ -27,11 +28,14 @@ defines
 
 public_headers
 {
+	mongoose/http_connection_handler.h
+	mongoose/http_server.h
 	mongoose.h
 }
 
 sources
 {
+	mongoose/http_server.cpp
 	mongoose.c
 }
 
